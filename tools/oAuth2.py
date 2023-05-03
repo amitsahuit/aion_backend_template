@@ -74,7 +74,7 @@ def get_current_user(
 
     Usertoken = verify_access_token(token, credentials_exception)
 
-    # Trying to return complete user details not only ID.
+    # Trying to return complete user details not only ID..
     user = db.query(model.User).filter(model.User.id == Usertoken.userID).first()
     print("User Name is: ", user.name)
     return user
